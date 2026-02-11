@@ -1,0 +1,12 @@
+[book]
+title = "Rust Feed"
+authors = ["Suradet Pratomsak"]
+language = "th"
+
+[output.html]
+additional-css = ["theme/mdbook-admonish.css"]
+
+[preprocessor.admonish]
+command = "mdbook-admonish"
+assets_version = "3.1.0" # do not edit: managed by `mdbook-admonish install`
+
