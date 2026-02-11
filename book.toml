@@ -2,11 +2,13 @@
 title = "Rust Feed"
 authors = ["Suradet Pratomsak"]
 language = "th"
+description = "Rust Feedแหล่งรวบรวมบทความภาษา Rust ที่โพสต์ใน Facebook Rust Dev Community"
 
 [output.html]
+site-url = "https://pharmacist-sabot.github.io/rust-feed/"
+git-repository-url = "https://github.com/pharmacist-sabot/rust-feed"
 additional-css = ["theme/mdbook-admonish.css"]
 
 [preprocessor.admonish]
 command = "mdbook-admonish"
 assets_version = "3.1.0" # do not edit: managed by `mdbook-admonish install`
-
