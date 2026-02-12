@@ -47,12 +47,12 @@
 
 > **Workflow แบบไร้รอยต่อ**
 >
-> | ขั้นตอน | คำสั่ง | ผลลัพธ์ |
-> |---|---|---|
-> | เขียน Contract | Rust + `stylus-sdk` | Type-safe Smart Contract |
-> | Deploy | `cargo stylus deploy` | ส่ง WASM ขึ้น Chain |
-> | Generate ABI | `cargo stylus export-abi` | ABI สำหรับ Frontend |
-> | Frontend เรียกใช้ | `wagmi` + `viem` | TypeScript catch error ทันที |
+> | ขั้นตอน           | คำสั่ง                    | ผลลัพธ์                      |
+> | ----------------- | ------------------------- | ---------------------------- |
+> | เขียน Contract    | Rust + `stylus-sdk`       | Type-safe Smart Contract     |
+> | Deploy            | `cargo stylus deploy`     | ส่ง WASM ขึ้น Chain          |
+> | Generate ABI      | `cargo stylus export-abi` | ABI สำหรับ Frontend          |
+> | Frontend เรียกใช้ | `wagmi` + `viem`          | TypeScript catch error ทันที |
 
 โปรเจกต์จะถูก Scaffold ขึ้นมาพร้อมกับ `nitro-devnode` (Local Arbitrum chain ใน Docker) ซึ่งพร้อมรันทันที TypeScript ฝั่ง Frontend จะ Catch error ได้ทันทีถ้าเราเรียกชื่อฟังก์ชันผิดหรือส่ง Type ผิด นี่คือ **End-to-End Type Safety** ที่เชื่อมโลกของ Smart Contract และ Client Side เข้าด้วยกันอย่างสมบูรณ์
 
@@ -76,7 +76,7 @@
 
 **Credit & Reference:**
 
-1. [How I Built a Claude Code Skill That Scaffolds Complete Arbitrum dApps](https://dev.to/.../how-i-built-a-claude-code-skill-that...) — by Ben Greenberg
+1. [How I Built a Claude Code Skill That Scaffolds Complete Arbitrum dApps](https://dev.to/arbitrum/how-i-built-a-claude-code-skill-that-scaffolds-complete-arbitrum-dapps-2njl)
 2. [arbitrum-dapp-skill Documentation](https://hummusonrails.github.io/arbitrum-dapp-skill/)
 3. [X post](https://x.com/hummusonrails/status/2019337368033992833)
 4. [Build a dApp on Arbitrum with Claude (Video)](https://www.youtube.com/watch?v=vsejiaOTmJA&t=2s)

@@ -92,6 +92,6 @@
 
 **Credit & Reference:**
 
-1. [Introducing Honeymelon: A Case Study in Building a Better Media Converter](https://dev.to/.../introducing-honeymelon-a-case-study-in...) — by Jerome Thayananthajothy
+1. [Introducing Honeymelon: A Case Study in Building a Better Media Converter](https://dev.to/thavarshan/introducing-honeymelon-a-case-study-in-building-a-better-media-converter-51d9)
 2. [honeymelon GitHub repo](https://github.com/honeymelon-app/honeymelon)
 3. [Honeymelon Website](https://honeymelon.app/)
