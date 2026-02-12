@@ -1,4 +1,5 @@
 <!-- markdownlint-disable MD025 -->
+
 # Summary
 
 [Introduction](./README.md)
@@ -34,5 +35,6 @@
 # Rust Update
 
 - [RU001: Rust Project Goals 2026](./ru001-rust-project-goals-2026.md)
+- [RU002: จาก Feature สู่ Foundation](./ru002-rust-feature-to-foundation.md)
 
 # Rust Web
