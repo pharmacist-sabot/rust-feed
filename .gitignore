@@ -1,1 +1,6 @@
 book
+
+# Node.js (used for SVG-to-PNG conversion script)
+node_modules/
+package.json
+package-lock.json

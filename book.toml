@@ -2,9 +2,8 @@
 title = "Rust Feed"
 authors = ["Suradet Pratomsak"]
 language = "th"
-description = "Rust Feedแหล่งรวบรวมบทความภาษา Rust ที่โพสต์ใน Facebook Rust Dev Community"
+description = "Rust Feed แหล่งรวบรวมบทความภาษา Rust ที่โพสต์ใน Facebook Rust Dev Community"
 
 [output.html]
 site-url = "https://pharmacist-sabot.github.io/rust-feed/"
 git-repository-url = "https://github.com/pharmacist-sabot/rust-feed"
-
