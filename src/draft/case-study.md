@@ -20,7 +20,7 @@
 
 ### 1. หัวข้อบทความ (Title)
 
-```
+```text
 # [ชื่อบทความที่สื่อความหมาย — กระชับ ดึงดูด]
 ```
 
@@ -46,6 +46,7 @@
 - ถ้าเป็นการ Rewrite จากภาษาอื่น ให้อธิบายว่าระบบเดิมใช้อะไร
 
 **ตัวอย่างหัวข้อ:**
+
 - `## The Cost of Runtime: ทำไมต้องหนีจาก Electron`
 - `## ข้อจำกัดของระบบเดิม`
 
@@ -74,6 +75,7 @@
   - **Rust-specific Patterns** — Pattern หรือ Idiom ของ Rust ที่ใช้
 
 **ตัวอย่างหัวข้อ:**
+
 - `## Architecture Design: Probe, Plan, Execute`
 - `## Rust Async Runtime vs Node.js Event Loop`
 - `## Concurrency Model`

@@ -4,15 +4,15 @@
 
 ## เนื้อหาแบ่งตามหัวข้อดังนี้
 
-- **Case Study**: กรณีศึกษาจากโปรเจกต์จริง
-- **Deep Dive**: เจาะลึกสถาปัตยกรรมและแนวคิดสำคัญ
-- **Rust Blockchain**: Rust กับเทคโนโลยี Blockchain
-- **Rust Core**: แนวคิดหลักของภาษา Rust
-- **Rust Crates**: ไลบรารีและ crates ที่น่าสนใจ
-- **Rust Games**: การพัฒนาเกมด้วย Rust
-- **Rust Hacker**: เทคนิคขั้นสูงและ low-level programming
-- **Rust Project**: ไอเดียและโปรเจกต์ตัวอย่าง
-- **Rust Research**: งานวิจัยและบทความเชิงวิชาการ
-- **Rust Tools**: เครื่องมือที่ช่วยในการพัฒนา
-- **Rust Update**: ข่าวสารและอัปเดตล่าสุด
-- **Rust Web**: การพัฒนาเว็บด้วย Rust
+- [**Case Study**](./case-study/index.md): กรณีศึกษาจากโปรเจกต์จริง
+- [**Deep Dive**](./deep-dive/index.md): เจาะลึกสถาปัตยกรรมและแนวคิดสำคัญ
+- [**Rust Blockchain**](./rust-blockchain/index.md): Rust กับเทคโนโลยี Blockchain
+- [**Rust Core**](./rust-core/index.md): แนวคิดหลักของภาษา Rust
+- [**Rust Crates**](./rust-crates/index.md): ไลบรารีและ crates ที่น่าสนใจ
+- [**Rust Games**](./rust-games/index.md): การพัฒนาเกมด้วย Rust
+- [**Rust Hacker**](./rust-hacker/index.md): เทคนิคขั้นสูงและ low-level programming
+- [**Rust Project**](./rust-project/index.md): ไอเดียและโปรเจกต์ตัวอย่าง
+- [**Rust Research**](./rust-research/index.md): งานวิจัยและบทความเชิงวิชาการ
+- [**Rust Tools**](./rust-tools/index.md): เครื่องมือที่ช่วยในการพัฒนา
+- [**Rust Update**](./rust-update/index.md): ข่าวสารและอัปเดตล่าสุด
+- [**Rust Web**](./rust-web/index.md): การพัฒนาเว็บด้วย Rust
