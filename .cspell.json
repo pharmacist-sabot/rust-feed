@@ -81,7 +81,18 @@
     "Niko",
     "Matsakis",
     "stabilizations",
-    "Supertrait"
+    "Supertrait",
+    "Toolbelt",
+    "Bytemuck",
+    "Metaprogramming",
+    "Utoipa",
+    "Tarpc",
+    "Schemars",
+    "Chumsky",
+    "Hexplay",
+    "WGPU",
+    "Microcontroller",
+    "Pico"
   ],
   "ignoreRegExpList": [
     "\\[.*?\\]\\(.*?\\)",

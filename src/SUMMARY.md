@@ -26,6 +26,7 @@
 # Rust Crates
 
 - [Rust Crates](./rust-crates/index.md)
+  - [[Rust Crates] List Crates ที่น่าจับตามองที่สุดในปี 2025 ที่ผ่านมา](./rust-crates/rcr001-top-crates-2025.md)
 # Rust Games
 
 - [Rust Games](./rust-games/index.md)
