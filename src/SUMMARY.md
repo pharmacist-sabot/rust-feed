@@ -31,6 +31,7 @@
 # Rust Project
 
 - [RP001: Ironpad — Rust กับ AI-Assisted Development](./rp001-ironpad-rust-ai-development.md)
+- [RP002: moss — Unix-like Kernel ที่เขียนด้วย Rust และ Aarch64 Assembly](./rp002-moss-unix-like-kernel.md)
 
 # Rust Research
 
