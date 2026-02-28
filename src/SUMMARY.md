@@ -20,6 +20,7 @@
 # Rust Core
 
 - [RC001: สถาปัตยกรรม Compilation Pipeline ของ Rust](./rc001-rust-compilation-pipeline.md)
+- [RC002: เมื่อ Benchmark เผยปรัชญาของภาษา](./rc002-benchmark-integer-overflow.md)
 
 # Rust Crates
 
