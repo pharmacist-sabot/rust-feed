@@ -1,5 +1,7 @@
 # [Rust Crates] List Crates ที่น่าจับตามองที่สุดในปี 2025 ที่ผ่านมา
 
+> 📅 วันที่เผยแพร่: 2026-02-28
+
 เรามักจะได้ยินคำแนะนำว่า "You should switch to Rust" กันจนชินหู แต่ในปี 2025 ที่ผ่านมา เหตุผลของการย้ายมาใช้ Rust ไม่ใช่แค่เรื่อง Memory Safety อีกต่อไป แต่มันคือเรื่องของ Ecosystem Maturity ที่ก้าวไปถึงจุด Peak Performance
 
 ผมได้สรุปรายการ Must-Know Crates จาก Engineering Team ของ Freestyle มาวิเคราะห์เจาะลึกในมุมมองเชิงสถาปัตยกรรม (Architecture) และ System Programming ว่าทำไมไลบรารีเหล่านี้ถึงน่าจับตามอง ที่ Rust Developer ทุกคนควรมีติด Toolbelt ไว้ครับ

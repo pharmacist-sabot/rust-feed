@@ -1,5 +1,7 @@
 # เจาะลึกสถาปัตยกรรม "Leptos" กับแนวคิด Fine-Grained Reactivity
 
+> 📅 วันที่เผยแพร่: 2026-02-12
+
 การพัฒนา Rust Web Development เรามักคุ้นเคยกับ Framework ที่พยายามยกโมเดลของ React มาใส่ใน **Rust** (เช่น Yew) ซึ่งแม้จะปลอดภัยและเขียนสนุก แต่ลึกๆ แล้วเรายังต้องจ่าย "ภาษี" ให้กับระบบ **Virtual DOM (VDOM)** ไม่ว่าจะเป็นการ Diffing trees หรือการ Re-render component ซ้ำๆ เมื่อ State เปลี่ยน ซึ่งฟังดูแล้วมันขัดแย้งกับปรัชญา **Zero-cost abstractions** ที่ชาว **Rustacean** ยึดถือ
 
 แต่วันนี้ผมอยากพาไปรู้จัก **Leptos** (เล็ปโตส) Framework ที่กล้าทิ้ง VDOM และนำศักยภาพของ **Rust** มาใช้รีดประสิทธิภาพ **Web Assembly (WASM)** จนถึงขีดสุด

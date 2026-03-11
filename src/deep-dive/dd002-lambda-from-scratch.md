@@ -1,5 +1,7 @@
 # Lambda From Scratch: เขียน Custom Runtime เองด้วย Rust แบบไม่ง้อ SDK
 
+> 📅 วันที่เผยแพร่: 2026-02-28
+
 ปกติเวลาเราเขียน AWS Lambda ด้วย Rust เรามักจะจบที่ crate `lambda_runtime` หรือใช้ `cargo-lambda` ซึ่งมันสะดวกมาก แต่เคยสงสัยไหมครับว่า "under the covers" ของ Lambda Runtime จริงๆ แล้วมันคุยกับ AWS Infrastructure อย่างไร
 
 มี Case Study ที่น่าสนใจมากครับ เป็นการเขียน Lambda แบบ "Stripped down" สุดๆ ใช้แค่ crate `reqwest` และ `serde_json` เท่านั้น เพื่อ Implement Lambda Runtime API ด้วยตัวเอง โพสต์นี้ผมจะพาไปดู Mechanism การทำงานระดับ Low-level ของ Serverless และเทคนิคการ Build Rust ให้เป็น bootstrap binary ที่ทรงพลังครับ

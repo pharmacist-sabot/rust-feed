@@ -7,14 +7,14 @@
 # Case Study
 
 - [Case Study](./case-study/index.md)
-  - [การสร้าง Media Converter ด้วย Rust](./case-study/cs001-honeymelon-media-converter.md)
   - [การ Modernize ระบบ COBOL ด้วย Rust อย่างปลอดภัยด้วย Guardrails ของ AI](./case-study/cs002-modernize-cobol-with-rust.md)
+  - [การสร้าง Media Converter ด้วย Rust](./case-study/cs001-honeymelon-media-converter.md)
 
 # Deep Dive
 
 - [Deep Dive](./deep-dive/index.md)
-  - [เจาะลึกสถาปัตยกรรม "Leptos" กับแนวคิด Fine-Grained Reactivity](./deep-dive/dd001-leptos-architecture.md)
   - [Lambda From Scratch: เขียน Custom Runtime เองด้วย Rust แบบไม่ง้อ SDK](./deep-dive/dd002-lambda-from-scratch.md)
+  - [เจาะลึกสถาปัตยกรรม "Leptos" กับแนวคิด Fine-Grained Reactivity](./deep-dive/dd001-leptos-architecture.md)
 
 # Rust Blockchain
 
@@ -43,9 +43,9 @@
 # Rust Project
 
 - [Rust Project](./rust-project/index.md)
-  - ["Ironpad" เมื่อ Rust กับ AI-Assisted Development พิสูจน์ว่าพวกมันถูกสร้างมาเพื่อกันและกัน](./rust-project/rp001-ironpad-rust-ai-development.md)
   - [moss: Unix-like Kernel ที่เขียนด้วย Rust และ Aarch64 Assembly](./rust-project/rp002-moss-unix-like-kernel.md)
   - [Redistill: บทพิสูจน์ศักยภาพของ Rust ในการทลายขีดจำกัด Throughput ของ Redis สู่ระดับ 9 ล้าน Ops/sec](./rust-project/rp003-redistill-redis-replacement.md)
+  - ["Ironpad" เมื่อ Rust กับ AI-Assisted Development พิสูจน์ว่าพวกมันถูกสร้างมาเพื่อกันและกัน](./rust-project/rp001-ironpad-rust-ai-development.md)
 
 # Rust Research
 

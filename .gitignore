@@ -7,3 +7,6 @@ package-lock.json
 
 # Lint tool cache
 .markdownlint-cli2-results.txt
+
+# Rust build artifacts (auto_index script)
+**/target/

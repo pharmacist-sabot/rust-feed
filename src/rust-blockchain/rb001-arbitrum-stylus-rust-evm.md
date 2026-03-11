@@ -1,5 +1,7 @@
 # เมื่อ Rust บุกโลก EVM: เจาะลึก Architecture ของ Arbitrum Stylus ผ่าน Claude Code Skill
 
+> 📅 วันที่เผยแพร่: 2026-02-12
+
 ในการพัฒนา Web3 มักมีช่องว่างขนาดใหญ่ที่น่าอึดอัดใจอยู่เรื่องหนึ่ง ฝั่งหนึ่งเรามี Tutorial ระดับ "Hello World" ที่สอนแค่ Deploy Counter Contract ง่ายๆ แล้วจบไป แต่อีกฝั่งคือ Production Codebase ขนาดมหึมาที่เต็มไปด้วย Configuration ซับซ้อนซึ่งต้องใช้เวลาหลายเดือนในการตกผลึก
 
 ปัญหาที่ Ben Greenberg (DevRel จาก Arbitrum) ค้นพบคือ เมื่อ Developer พยายามใช้ AI อย่าง Claude เพื่อปิดช่องว่างนี้ AI มักจะให้ Code ที่ "ดูเหมือนจะถูก" แต่กลับใช้ SDK เวอร์ชันเก่า หรือใช้ Pattern ที่พังทันทีเมื่อรันบนระบบใหม่อย่าง Arbitrum Stylus
