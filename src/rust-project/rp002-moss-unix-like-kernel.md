@@ -1,70 +1,24 @@
-# moss: Unix-like Kernel ที่เขียนด้วย Rust และ Aarch64 Assembly
+# "moss" Unix-like Kernel ที่เขียนด้วย Rust
 
-> 📅 วันที่เผยแพร่: 2026-02-28
+> 📅 วันที่เผยแพร่: 2026-02-14
 
-## 1. บทนำ (Introduction)
+มีโปรเจคน่าสนใจมาแนะนำ moss (Linux-compatible kernel) ที่เขียนด้วย Rust และ Aarch64 assembly
 
-การพัฒนาระบบปฏิบัติการ (OS Development) มักเป็นพื้นที่ที่ถูกยึดครองโดยภาษา C มาอย่างยาวนาน แต่ด้วยความสามารถเชิง Memory Safety ของ Rust ทำให้มีนักพัฒนาหลายคนหันมาทดลองสร้าง OS ในแนวทางใหม่ หนึ่งในโปรเจกต์ที่น่าจับตามองในขณะนี้คือ **moss** ซึ่งตั้งเป้าเป็น Linux-compatible Kernel ที่ถูกพัฒนาขึ้นโดยใช้ภาษา Rust และ Aarch64 Assembly
+## การใช้ async/await ใน Kernel Context
 
-โปรเจกต์พัฒนาระบบปฏิบัติการที่มีการ Implement ไปแล้วกว่า 105 Linux syscalls นี้สามารถรัน Userspace อย่าง Arch Linux aarch64 ได้จริง รวมถึงเครื่องมือพื้นฐานอย่าง bash, BusyBox, coreutils, ps, top และ strace ก็สามารถทำงานได้ นี่ไม่ใช่แค่การพิสูจน์ว่ามันเป็นไปได้ แต่มันสะท้อนให้เห็นถึงขีดความสามารถใหม่ๆ ที่ Rust มอบให้กับนักพัฒนา OS
+จุดเด่นที่ทำให้ moss แตกต่างคือการใช้ `async/await` ใน kernel context ครับ system calls ทั้งหมดเป็น async functions ทำให้ compiler ช่วย enforce ว่าไม่สามารถ hold spinlock ขณะ sleep ได้ ซึ่งช่วยกำจัด class ของ bugs ที่เป็น deadlocks ได้ที่ต้นเหตุ แถม future ไหนก็ได้สามารถห่อด้วย `.interruptable()` combinator เพื่อให้ signals สามารถขัดจังหวะการรอได้อย่างถูกต้อง
 
----
+## ความสามารถในปัจจุบัน
 
-## 2. ทำไมต้อง Rust? (Why Rust?)
+ปัจจุบัน moss สามารถรัน Arch Linux aarch64 userspace ได้จริง รวมถึง bash, BusyBox, coreutils, ps, top และ strace implement ไปแล้ว 105 Linux syscalls พร้อม SMP scheduling ผ่าน EEVDF, fork/execve/clone, signal handling และ ptrace support ที่เพียงพอต่อการรัน strace บน Arch binaries
 
-ความแตกต่างที่ชัดเจนและเป็นหัวใจสำคัญที่ทำให้ moss เลือกใช้ Rust ไม่ใช่แค่เพียงแค่เรื่องความปลอดภัยของหน่วยความจำ (Memory Safety) แต่เป็นเรื่องของการใช้ **`async/await`** เข้ามาประยุกต์ใช้ในบริบทของ Kernel
+## สถาปัตยกรรม libkernel ที่ทดสอบง่าย
 
-> **The Power of Async Kernel**
->
-> System calls ทั้งหมดใน moss ถูกออกแบบให้เป็น Async functions ทำให้ Rust Compiler สามารถช่วยตรวจสอบและบังคับ (Enforce) ได้ว่าผู้พัฒนาจะไม่สร้างบั๊กอย่างการถือ Spinlock เอาไว้ในขณะที่มีการสั่ง Sleep อยู่ ซึ่งเป็นการแก้ปัญหา Deadlock ที่ต้นเหตุ!
+ส่วนที่ผมชอบเป็นพิเศษคือการออกแบบ libkernel ที่แยก architecture-agnostic logic ออกมา ทำให้เทสได้บน host machine (x86) ก่อนรันบน bare metal ตอนนี้มี test suite 230+ tests เลยครับ
 
-นอกจากนี้ การใช้ Async Future ใน Rust ยังเปิดโอกาสให้ Future ใดๆ ก็ตามสามารถถูกห่อ (Wrap) ด้วย `.interruptable()` combinator เพื่อให้ Signal ภายนอกสามารถเข้ามาขัดจังหวะการรอคอยได้อย่างถูกต้องตามหลักการทำงานของ OS ยุคใหม่
+## Roadmap ในอนาคต
 
----
-
-## 3. สถาปัตยกรรมและการออกแบบ (Architecture & Design)
-
-ในเชิงการจัดการสถาปัตยกรรม (Architecture) moss ถูกดีไซน์ขึ้นมาอย่างปราดเปรื่องโดยคำนึงถึงประสบการณ์ส่วนการพัฒนา (Developer Experience)
-
-จุดที่น่าสนใจเป็นพิเศษคือการออกแบบ **libkernel** โดยมีการแยก **Architecture-agnostic logic** (ลอจิกของการทำงานหลักที่ไม่ผูกติดกับโครงสร้างระดับฮาร์ดแวร์เฉพาะอย่างใดอย่างหนึ่ง) ออกมาจากส่วนอื่นอย่างชัดเจน
-
-> **Test Before Bare Metal**
->
-> การแยกส่วนประกอบนี้ทำให้นักพัฒนาสามารถทดสอบกลไกการทำงานของ OS ได้โดยตรงบน Host machine (เช่นสถาปัตยกรรม x86 ที่นักพัฒนาใช้งานอยู่) ก่อนที่จะนำไปติดตั้งหรือรันจริงบน Bare metal ปัจจุบัน Test suite มีการทดสอบครอบคลุมไปกว่า 230+ เทสแล้ว
-
----
-
-## 4. Feature Highlights
-
-แม้จะยังอยู่ในช่วงพัฒนา แต่ความสามารถที่ moss มอบให้ก็ครอบคลุมฟีเจอร์พื้นฐานสำหรับระบบปฏิบัติการลีนุกซ์ได้อย่างน่าทึ่ง:
-
-- รองรับการทำงานของ **Arch Linux aarch64 Userspace** (สามารถรันคำสั่งพื้นฐานทั้ง `bash`, `ps`, `top`)
-- ตรวจสอบความสมบูรณ์และรองรับกว่า **105 Linux syscalls**
-- ระบบ **SMP scheduling** ระดับมัลติคอร์ด้วย EEVDF
-- กลไกการสร้าง processes รูปแบบมาตรฐาน (เช่น `fork`, `execve`, `clone`)
-- **Signal handling** และ **ptrace support** เพียงพอต่อการเปิดให้ผู้ใช้ออกคำสั่งเพื่อทำ strace กับโปรแกรมของ Arch
-
----
-
-## 5. บทเรียนและทิศทางของโปรเจกต์ในอนาคต
-
-สำหรับใครที่สนใจศาสตร์ทางด้าน OS Development หรือการใช้งาน Async Rust ในรูปแบบ Extreme Case นี่คือโปรเจกต์ Open Source ที่น่าเข้าไปศึกษาเป็นอย่างยิ่ง
-
-ขณะนี้ moss ยังคงสถานะเป็น Active Development โดยมี Roadmap ในอนาคตที่ท้าทายมากมาย ไม่ว่าจะเป็น:
-
-- การนำ **TCP/IP stack** เข้ามารวมอยู่ภายใน
-- การสร้างไดรเวอร์สำหรับ **Read/Write filesystem**
-- การพัฒนาไปจนกระทั่งสามารถรันระบบย่อยอย่าง **systemd** ได้
-
-ที่สำคัญคือโปรเจกต์ยังเปิดรับ Contributor ทั้งผู้ที่ต้องการพอร์ต (Port) ให้รองรับระบบ x86, การเพิ่มจำนวน Syscall, หรือการพยายามเขียนไดรเวอร์แบบต่างๆ
-
----
-
-## 6. บทสรุป (Conclusion)
-
-โปรเจกต์ moss ไม่ได้เป็นเพียงการเขียน OS ขึ้นมาใหม่ด้วยภาษาที่ทันสมัย แต่มันเป็นสนามทดลองขนาดใหญ่ที่แสดงให้เห็นว่ากระบวนทัศน์การออกแบบระบบปฏิบัติการแบบดั้งเดิมสามารถหลอมรวมกับความสามารถอย่าง Async/Await ของ Rust ได้อย่างลงตัว
-
-> การออกแบบระบบโดยยกเอาลอจิกพื้นฐานมาผูกรวมกับลักษณะนิสัยของภาษา Rust ทำให้ผู้พัฒนาสามารถปล่อยให้ Compiler เป็นฝ่ายป้องกันปัญหาที่ซับซ้อน เช่น Deadlock หรือ Thread-blocking ได้ตั้งแต่แรก นี่คือชัยชนะที่ยิ่งใหญ่ของแนวคิดการออกแบบซอฟต์แวร์ระดับ Infrastructure
+โปรเจคยัง active development อยู่ roadmap มี TCP/IP stack, read/write filesystem driver, และ systemd bringup ใครสนใจ OS dev, async Rust หรืออยาก contribute (port x86, เพิ่ม syscalls, เขียน driver) แวะดูได้ครับ
 
 ---
 
