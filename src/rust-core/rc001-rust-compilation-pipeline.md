@@ -14,7 +14,7 @@
 
 ## หัวใจสำคัญ: MIR (Mid-Level Intermediate Representation)
 
-เมื่อผ่านการตรวจสอบเบื้องต้น HIR จะถูก Lower ลงอีกขั้นกลายเป็น Mid-Level Intermediate Representation (MIR) ซึ่งออกแบบมาเฉพาะสำหรับการทำ Complex Analysis MIR คือหัวใจสำคัญของ Rust เพราะมันทำหน้าที่เป็น Input หลักให้กับ Borrow Checker ในขั้นตอนนี้ `rustc` จะบังคับใช้กฎ Ownership, Borrowing และ Lifetimes อย่างเคร่งครัด 
+เมื่อผ่านการตรวจสอบเบื้องต้น HIR จะถูก Lower ลงอีกขั้นกลายเป็น Mid-Level Intermediate Representation (MIR) ซึ่งออกแบบมาเฉพาะสำหรับการทำ Complex Analysis MIR คือหัวใจสำคัญของ Rust เพราะมันทำหน้าที่เป็น Input หลักให้กับ Borrow Checker ในขั้นตอนนี้ `rustc` จะบังคับใช้กฎ Ownership, Borrowing และ Lifetimes อย่างเคร่งครัด
 
 นอกจากนี้ยังมีกระบวนการ Lifetime Elision ที่ Compiler จะพยายามอนุมาน (Infer) ความสัมพันธ์ของ Lifetime โดยอัตโนมัติ เพื่อลดภาระการเขียน Generic Lifetime Annotations ที่ไม่จำเป็น การวิเคราะห์แบบ Static ในระดับ MIR นี้เอง ที่ทำให้ Rust สามารถป้องกันปัญหา Dangling References และการันตี Memory Safety ได้ตั้งแต่ตอน Compile
 

@@ -7,13 +7,16 @@
 # Case Study
 
 - [Case Study](./case-study/index.md)
-  - [การ Modernize ระบบ COBOL ด้วย Rust อย่างปลอดภัยด้วย Guardrails ของ AI](./case-study/cs002-modernize-cobol-with-rust.md)
+  - [การใช้ Rust หั่นโค้ดทิ้ง 90% ก่อนป้อนให้ LLM](./case-study/cs003-skim-code-for-llm.md)
+  - [เมื่อความน่าจะเป็นของ AI ปะทะกับความเข้มงวดของ Rust บทเรียนจากการ Modernize ระบบ COBOL ด้วย Rust](./case-study/cs002-modernize-cobol-with-rust.md)
   - [การสร้าง Media Converter ด้วย Rust](./case-study/cs001-honeymelon-media-converter.md)
 
 # Deep Dive
 
 - [Deep Dive](./deep-dive/index.md)
+  - [10 ปีแห่งการรอคอย เจาะลึกสถาปัตยกรรม Allocator ของ Rust และก้าวต่อไปในปี 2026](./deep-dive/dd003-allocators-architecture-2026.md)
   - [Lambda From Scratch: เขียน Custom Runtime เองด้วย Rust แบบไม่ง้อ SDK](./deep-dive/dd002-lambda-from-scratch.md)
+  - [เจาะลึกสถาปัตยกรรม "Leptos" กับแนวคิด Fine-Grained Reactivity](./deep-dive/dd001-leptos-fine-grained-reactivity.md)
 
 # Rust Blockchain
 
@@ -23,13 +26,16 @@
 # Rust Core
 
 - [Rust Core](./rust-core/index.md)
+  - [เมื่อสถาปัตยกรรมของภาษาไม่อาจลอกเลียนแบบได้ ทำไม Error Handling ของ Rust ถึงเป็น Masterpiece](./rust-core/rc003-error-handling-masterpiece.md)
+  - [ทำความรู้จัก Smart Pointer](./rust-core/rc004-smart-pointers-guide.md)
   - [สถาปัตยกรรม Compilation Pipeline ของ Rust](./rust-core/rc001-rust-compilation-pipeline.md)
-  - [เมื่อ Benchmark เผยปรัชญาของภาษา: มุมมองเรื่องความถูกต้องใน Rust](./rust-core/rc002-benchmark-integer-overflow.md)
+  - [บางครั้ง Benchmark ไม่ได้วัดแค่ความเร็ว แต่กำลังเผยให้เราเห็นถึงปรัชญาของภาษานั้นๆ](./rust-core/rc002-benchmark-integer-overflow.md)
 
 # Rust Crates
 
 - [Rust Crates](./rust-crates/index.md)
   - [[Rust Crates] List Crates ที่น่าจับตามองที่สุดในปี 2025 ที่ผ่านมา](./rust-crates/rcr001-top-crates-2025.md)
+  - [อัปเดตนโยบายแจ้งเตือน Malicious Crate บน crates.io](./rust-crates/rcr002-malicious-crate-policy.md)
 
 # Rust Games
 
@@ -42,8 +48,9 @@
 # Rust Project
 
 - [Rust Project](./rust-project/index.md)
-  - [moss: Unix-like Kernel ที่เขียนด้วย Rust และ Aarch64 Assembly](./rust-project/rp002-moss-unix-like-kernel.md)
+  - ["sabiql" TUI ที่ไม่ง้อ Database Driver](./rust-project/rp004-sabiql-driverless-tui.md)
   - [Redistill: บทพิสูจน์ศักยภาพของ Rust ในการทลายขีดจำกัด Throughput ของ Redis สู่ระดับ 9 ล้าน Ops/sec](./rust-project/rp003-redistill-redis-replacement.md)
+  - ["moss" Unix-like Kernel ที่เขียนด้วย Rust](./rust-project/rp002-moss-unix-like-kernel.md)
   - ["Ironpad" เมื่อ Rust กับ AI-Assisted Development พิสูจน์ว่าพวกมันถูกสร้างมาเพื่อกันและกัน](./rust-project/rp001-ironpad-rust-ai-development.md)
 
 # Rust Research
@@ -53,12 +60,13 @@
 # Rust Tools
 
 - [Rust Tools](./rust-tools/index.md)
+  - [git-ai เครื่องมือที่เอาไว้ Track AI Code](./rust-tools/rt001-git-ai-tracking.md)
 
 # Rust Update
 
 - [Rust Update](./rust-update/index.md)
   - [Rust Project Goals 2026 วิวัฒนาการครั้งสำคัญของกระบวนการพัฒนาที่ Rustacean ควรรู้](./rust-update/ru001-rust-project-goals-2026.md)
-  - [จาก Feature สู่ Foundation: Rust มุ่งสู่การพัฒนาระดับโครงสร้างข้ามปี](./rust-update/ru002-rust-feature-to-foundation.md)
+  - [จาก Feature สู่ Foundation](./rust-update/ru002-rust-feature-to-foundation.md)
 
 # Rust Web
 

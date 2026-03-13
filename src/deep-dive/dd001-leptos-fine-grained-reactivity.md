@@ -16,7 +16,7 @@
 
 ## Isomorphic Framework แบบ Full-stack ขนานแท้
 
-แต่ Leptos ไม่ได้หยุดแค่การเป็น Client-side Library ที่เร็วเท่านั้น มันถูกวางสถานะเป็น Full-stack Isomorphic Framework ตั้งแต่ต้นน้ำ ยิ่งเมื่อทำงานร่วมกับ `cargo-leptos` เราจะเห็นศักยภาพของการทำ Server Functions ที่ทำให้เส้นแบ่งระหว่าง Client และ Server จางลง คุณสามารถเขียนฟังก์ชันดึง Database ในไฟล์เดียวกับ Component แล้วเรียกใช้เหมือนฟังก์ชันปกติ (RPC-like) โดยระบบจะจัดการเรื่อง Serialization/Deserialization ให้เอง 
+แต่ Leptos ไม่ได้หยุดแค่การเป็น Client-side Library ที่เร็วเท่านั้น มันถูกวางสถานะเป็น Full-stack Isomorphic Framework ตั้งแต่ต้นน้ำ ยิ่งเมื่อทำงานร่วมกับ `cargo-leptos` เราจะเห็นศักยภาพของการทำ Server Functions ที่ทำให้เส้นแบ่งระหว่าง Client และ Server จางลง คุณสามารถเขียนฟังก์ชันดึง Database ในไฟล์เดียวกับ Component แล้วเรียกใช้เหมือนฟังก์ชันปกติ (RPC-like) โดยระบบจะจัดการเรื่อง Serialization/Deserialization ให้เอง
 
 เบื้องหลังมันคือการรองรับมาตรฐาน Web สมัยใหม่อย่างแท้จริง ทั้งการทำ HTML Streaming แบบ Out-of-order และ `<Suspense/>` ที่ช่วยให้ User เห็น Content ได้ไวที่สุดโดยไม่ต้องรอ Data ทั้งก้อน (Holistic Web Performance)
 
