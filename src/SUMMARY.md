@@ -14,7 +14,6 @@
 
 - [Deep Dive](./deep-dive/index.md)
   - [Lambda From Scratch: เขียน Custom Runtime เองด้วย Rust แบบไม่ง้อ SDK](./deep-dive/dd002-lambda-from-scratch.md)
-  - [เจาะลึกสถาปัตยกรรม "Leptos" กับแนวคิด Fine-Grained Reactivity](./deep-dive/dd001-leptos-architecture.md)
 
 # Rust Blockchain
 
