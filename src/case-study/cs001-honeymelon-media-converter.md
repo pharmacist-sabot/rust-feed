@@ -11,6 +11,7 @@
 ปัญหาคลาสสิกของ Electron คือ Resource Overhead ครับ ผู้พัฒนาพบว่าเวอร์ชันแรกกินแรมมหาศาล (Unreasonable memory consumption) และ Binary มีขนาดใหญ่ (Bloated binary) การเปิด App ขึ้นมาเพื่อแปลงไฟล์ง่ายๆ แต่ต้องรัน Chromium ทั้งตัวเป็นเรื่องที่ Overkill เกินไป
 
 เมื่อย้ายมาใช้ Tauri 2 (Rust Backend) ผลลัพธ์คือ:
+
 - **Startup Time แทบจะ Instant** (Rust init FFmpeg capability detection แบบ Background thread ขณะที่ UI render)
 - **Memory Usage ลดลงเหลือระดับ Native Utility** ไม่ใช่ Web Browser
 - **App Size DMG มีขนาดเล็กลงอย่างมหาศาล**
@@ -24,6 +25,7 @@
 ## สิ่งที่ Rust มอบให้
 
 การเลือก Rust ไม่ใช่แค่เรื่องความเร็ว แต่คือ **Reliability** เพราะ:
+
 - **No Null Pointer Panics:** บอกลา `undefined is not a function` หรือ Crash กลางอากาศขณะแปลงไฟล์
 - **Typed Result Values:** การใช้ `Result<T, E>` ทำให้ Error Propagation ถูกจัดการอย่างถูกต้องและครอบคลุมทุกเคส
 - **No GC Pauses:** เรื่องนี้สำคัญมากสำหรับงาน Real-time progress tracking เพราะ Rust ไม่มี Garbage Collector มาคอย interrupt การทำงาน ทำให้ Progress events ที่ส่งกลับไปหน้าบ้านมีความลื่นไหลและแม่นยำ
@@ -31,6 +33,7 @@
 ## Architecture Design Probe, Plan, Execute
 
 สถาปัตยกรรมของ Honeymelon แบ่งเป็น 3 Stage ที่น่าสนใจ โดยมีการแบ่งหน้าที่ระหว่าง Frontend (TS) และ Backend (Rust) อย่างชัดเจน:
+
 - **Stage 1 - Probe (Rust):** Backend สั่ง `ffprobe` เพื่อดึง Metadata (Codec, Resolution, Color Primaries ฯลฯ)
 - **Stage 2 - Plan (TypeScript):** Logic การตัดสินใจว่าจะ "Remux" (Copy stream) หรือ "Transcode" ย้ายมาทำที่ Frontend ทั้งหมด เพื่อลด Round-trip ไปที่ Rust backend ทำให้ User เห็น Plan ทันที (Zero Latency UX)
 - **Stage 3 - Execute (Rust):** พระเอกของงาน Rust จะ spawn `ffmpeg` เป็น Child process และ Dedicated Thread มีการแยก Thread ออกมาเพื่อ parse `stderr` output ของ FFmpeg แบบ Real-time เพื่อคำนวณ % progress, fps, speed จากนั้น Atomic Writes เพื่อความปลอดภัยของข้อมูล Output file จะถูกเขียนลง Temporary path ก่อน และใช้ Atomic Rename เมื่อ process เสร็จสมบูรณ์ ป้องกันไฟล์เสียหากโปรแกรม Crash หรือถูก Cancel กลางคัน
@@ -48,6 +51,7 @@ Honeymelon พิสูจน์ให้เห็นว่า "The tools you ch
 ---
 
 **Credit & Reference:**
+
 1. ["Introducing Honeymelon: A Case Study in Building a Better Media Converter" by Jerome Thayananthajothy](https://dev.to/thavarshan/introducing-honeymelon-a-case-study-in-building-a-better-media-converter-51d9)
 2. [Honeymelon GitHub repo](https://github.com/honeymelon-app/honeymelon)
 3. [Honeymelon Website](https://honeymelon.app/)
