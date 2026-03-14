@@ -114,7 +114,7 @@ fn generate_index_content(category_name: &str, articles: &[Article]) -> String {
         for article in articles {
             if let Some(ref date) = article.date {
                 content.push_str(&format!(
-                    "- [{}](./{}) — 📅 {}\n",
+                    "- [{}](./{}) — {}\n",
                     article.title, article.filename, date
                 ));
             } else {
