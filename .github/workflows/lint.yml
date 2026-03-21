@@ -24,3 +24,11 @@ jobs:
             src/**/*.md
             #src/draft
           config: ".markdownlint.yml"
+
+  lychee:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: lycheeverse/lychee-action@v1
+        with:
+          args: --exclude-loopback --exclude "facebook.com" src/**/*.md
