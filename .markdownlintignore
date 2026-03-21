@@ -3,9 +3,5 @@
 # mdBook output directory
 book/
 
-# Draft articles (work-in-progress, not subject to lint)
-src/draft
-src/draft/
-
 # Node.js dependencies
 node_modules/

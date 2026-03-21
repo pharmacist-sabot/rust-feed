@@ -22,7 +22,6 @@ jobs:
         with:
           globs: |
             src/**/*.md
-            #src/draft
           config: ".markdownlint.yml"
 
   lychee:
