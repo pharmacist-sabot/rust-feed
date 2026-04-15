@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Run markdownlint
         uses: DavidAnson/markdownlint-cli2-action@v16
@@ -27,7 +27,7 @@ jobs:
   lychee:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: lycheeverse/lychee-action@v1
         with:
           args: --exclude-loopback --exclude "facebook.com" src/**/*.md
@@ -36,5 +36,5 @@ jobs:
     runs-on: ubuntu-latest
     name: Test Auto Index
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - run: cargo test --manifest-path scripts/auto_index/Cargo.toml
