@@ -73,9 +73,3 @@
 ---
 
 List นี้สะท้อนให้เห็นว่า Rust Community ในปี 2025 ที่ผ่านมา ไม่ได้หยุดอยู่แค่ความปลอดภัย แต่เน้นไปที่ Developer Experience (DX) และ Performance Optimization ในระดับสถาปัตยกรรม เครื่องมือเหล่านี้คือสิ่งที่ทำให้ Rust กลายเป็นภาษาที่ "Complete" ที่สุดภาษาหนึ่งในยุคปัจจุบัน หวังว่าจะเป็นประโยชน์และได้ไอเดียไปปรับใช้กับโปรเจกต์ของทุกท่านครับ
-
----
-
-**Credit & Reference:**
-
-1. ["Our team's favorite Rust crates 2025" By Will Hopkins (Freestyle Engineering Team)](https://docs.freestyle.sh/blog/rust-crates-2025)
