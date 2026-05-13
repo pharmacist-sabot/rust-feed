@@ -76,6 +76,7 @@
 # Rust Project
 
 - [Rust Project](./rust-project/index.md)
+  - [แผนที่โลกกับ Shared Memory มาทำความรู้จัก GeoRust กัน](./rust-project/georust-shared-memory.md)
   - [ถ้า cargo test มันช้า มาลอง cargo-nextest ไหมล่ะ](./rust-project/cargo-nextest.md)
   - ["sabiql" TUI ที่ไม่ง้อ Database Driver](./rust-project/sabiql-driverless-tui.md)
   - ["moss" Unix-like Kernel ที่เขียนด้วย Rust](./rust-project/moss-unix-like-kernel.md)

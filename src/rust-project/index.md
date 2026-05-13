@@ -1,5 +1,6 @@
 # Rust Project
 
+- [แผนที่โลกกับ Shared Memory มาทำความรู้จัก GeoRust กัน](./georust-shared-memory.md) — 2026-05-13
 - [ถ้า cargo test มันช้า มาลอง cargo-nextest ไหมล่ะ](./cargo-nextest.md) — 2026-04-28
 - ["sabiql" TUI ที่ไม่ง้อ Database Driver](./sabiql-driverless-tui.md) — 2026-03-06
 - ["moss" Unix-like Kernel ที่เขียนด้วย Rust](./moss-unix-like-kernel.md) — 2026-02-14
