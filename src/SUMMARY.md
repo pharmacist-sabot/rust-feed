@@ -101,6 +101,7 @@
   - [git-ai เครื่องมือที่เอาไว้ Track AI Code](./rust-tools/git-ai-tracking.md)
   - [Eurydice เมื่อ Rust ถอดร่างเป็น C](./rust-tools/eurydice-when-rust-becomes-c.md)
   - ["Zerobrew" รีดประสิทธิภาพ Package Manager ให้เร็วกว่าเดิม 5-20x ด้วย Rust](./rust-tools/zerobrew-rust-package-manager.md)
+  - [แก้ปัญหาระบบ Async อืดแบบไม่ต้องแก้โค้ดด้วย hud และ eBPF](./rust-tools/hud-ebpf-async-debugging.md)
 
 # Rust Update
 
