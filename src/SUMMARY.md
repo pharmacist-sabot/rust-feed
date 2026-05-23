@@ -7,6 +7,7 @@
 # Case Study
 
 - [Case Study](./case-study/index.md)
+  - [GitGuardian พอร์ต Secrets Detection Engine จาก Python สู่ Rust ได้ความเร็วเพิ่มขึ้น 43x](./case-study/gitguardian-python-to-rust-43x.md)
   - [ถอดบทเรียนความปลอดภัยจาก Cargo เมื่อกระบวนการ Build กลายเป็นช่องโหว่](./case-study/cargo-build-supply-chain.md)
   - [เมื่อ Vite 8 เดิมพันอนาคตของ Web Tooling ด้วยสถาปัตยกรรมแบบที่ขับเคลื่อนด้วย Rust (Rolldown + Oxc)](./case-study/vite-8-rust-rolldown-oxc.md)
   - [การใช้ Rust หั่นโค้ดทิ้ง 90% ก่อนป้อนให้ LLM](./case-study/skim-code-for-llm.md)
@@ -76,7 +77,7 @@
 # Rust Project
 
 - [Rust Project](./rust-project/index.md)
-  - [nostr-vpn: Private Mesh VPN สไตล์ Tailscale ที่ใช้ Rust ขับเคลื่อน](./rust-project/nostr-vpn.md)
+  - [รู้จัก nostr-vpn กันหรือยัง?](./rust-project/nostr-vpn.md)
   - [แผนที่โลกกับ Shared Memory มาทำความรู้จัก GeoRust กัน](./rust-project/georust-shared-memory.md)
   - [ถ้า cargo test มันช้า มาลอง cargo-nextest ไหมล่ะ](./rust-project/cargo-nextest.md)
   - ["sabiql" TUI ที่ไม่ง้อ Database Driver](./rust-project/sabiql-driverless-tui.md)

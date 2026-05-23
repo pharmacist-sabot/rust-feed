@@ -1,5 +1,6 @@
 # Case Study
 
+- [GitGuardian พอร์ต Secrets Detection Engine จาก Python สู่ Rust ได้ความเร็วเพิ่มขึ้น 43x](./gitguardian-python-to-rust-43x.md) — 2026-05-20
 - [ถอดบทเรียนความปลอดภัยจาก Cargo เมื่อกระบวนการ Build กลายเป็นช่องโหว่](./cargo-build-supply-chain.md) — 2026-04-02
 - [เมื่อ Vite 8 เดิมพันอนาคตของ Web Tooling ด้วยสถาปัตยกรรมแบบที่ขับเคลื่อนด้วย Rust (Rolldown + Oxc)](./vite-8-rust-rolldown-oxc.md) — 2026-03-21
 - [การใช้ Rust หั่นโค้ดทิ้ง 90% ก่อนป้อนให้ LLM](./skim-code-for-llm.md) — 2026-03-08
