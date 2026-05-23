@@ -111,3 +111,4 @@
 # Rust Web
 
 - [Rust Web](./rust-web/index.md)
+  - [Rust Web Ecosystem ปี 2026 เมื่อ Web Development บน Rust พร้อมสำหรับ Production](./rust-web/rust-web-ecosystem-2026.md)
