@@ -92,6 +92,7 @@
 
 - [Rust Research](./rust-research/index.md)
   - [Rust Interop การเดินทางสู่แก่นแท้ของ Safety บนตะเข็บรอยต่อ C/C++](./rust-research/rust-interop-safety.md)
+  - [เมื่อ Rust กลายเป็นกุญแจสำคัญในการไขปริศนา Cryptography ยุคหลังควอนตัม](./rust-research/post-quantum-cryptography-rust.md)
 
 # Rust Tools
 
