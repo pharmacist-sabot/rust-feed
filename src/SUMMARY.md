@@ -76,6 +76,7 @@
 # Rust Project
 
 - [Rust Project](./rust-project/index.md)
+  - [nostr-vpn: Private Mesh VPN สไตล์ Tailscale ที่ใช้ Rust ขับเคลื่อน](./rust-project/nostr-vpn.md)
   - [แผนที่โลกกับ Shared Memory มาทำความรู้จัก GeoRust กัน](./rust-project/georust-shared-memory.md)
   - [ถ้า cargo test มันช้า มาลอง cargo-nextest ไหมล่ะ](./rust-project/cargo-nextest.md)
   - ["sabiql" TUI ที่ไม่ง้อ Database Driver](./rust-project/sabiql-driverless-tui.md)
