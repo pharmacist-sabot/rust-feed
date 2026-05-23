@@ -64,6 +64,7 @@
 # Rust Games
 
 - [Rust Games](./rust-games/index.md)
+  - [พาทำเกม 2D RPG ด้วย Bevy ฉบับ "โปรแกรมเมอร์ใจร้อน"](./rust-games/bevy-2d-rpg-tutorial.md)
 
 # Rust Hacker
 
