@@ -54,6 +54,7 @@
 # Rust Crates
 
 - [Rust Crates](./rust-crates/index.md)
+  - [ยกระดับ Unit Test ด้วย rstest](./rust-crates/rstest-unit-test.md)
   - [[Rust Crates] List Crates ที่น่าจับตามองที่สุดในปี 2025 ที่ผ่านมา](./rust-crates/rcr001-top-crates-2025.md)
   - [อัปเดตนโยบายแจ้งเตือน Malicious Crate บน crates.io](./rust-crates/malicious-crate-policy.md)
 
