@@ -9,6 +9,7 @@
 - [Case Study](./case-study/index.md)
   - [เมื่อ Meta ย้าย Flow จาก OCaml ไป #Rust](./case-study/meta-flow-ocaml-to-rust.md)
   - [ย้ายระบบ C ขนาดใหญ่ไป Rust อย่างไรไม่ให้พัง? เชิญชวนดูกรณีศึกษา Git v2.55](./case-study/git-2-55-rust.md)
+  - [Astro 7.0 เมื่อเว็บเฟรมเวิร์กย้ายแกนหลักออกจาก JavaScript](./case-study/astro-7-rust-toolchain.md)
   - [GitGuardian พอร์ต Secrets Detection Engine จาก Python สู่ Rust ได้ความเร็วเพิ่มขึ้น 43x](./case-study/gitguardian-python-to-rust-43x.md)
   - [ถอดบทเรียนความปลอดภัยจาก Cargo เมื่อกระบวนการ Build กลายเป็นช่องโหว่](./case-study/cargo-build-supply-chain.md)
   - [เมื่อ Vite 8 เดิมพันอนาคตของ Web Tooling ด้วยสถาปัตยกรรมแบบที่ขับเคลื่อนด้วย Rust (Rolldown + Oxc)](./case-study/vite-8-rust-rolldown-oxc.md)
