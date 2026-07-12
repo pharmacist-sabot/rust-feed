@@ -39,6 +39,7 @@
 # Rust Core
 
 - [Rust Core](./rust-core/index.md)
+  - [วันที่ Clippy เริ่มรีวิว PR ไม่ทัน](./rust-core/clippy-review-queue.md)
   - [เมื่อ Trait ไม่ใช่แค่เงื่อนไข แต่คือพารามิเตอร์ลับที่ Compiler แอบส่งให้คุณ](./rust-core/dictionary-passing-style.md)
   - [เมื่อสถาปัตยกรรมของภาษาไม่อาจลอกเลียนแบบได้ ทำไม Error Handling ของ Rust ถึงเป็น Masterpiece](./rust-core/error-handling-masterpiece.md)
   - [ทำความรู้จัก Smart Pointer](./rust-core/smart-pointers-guide.md)

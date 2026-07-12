@@ -1,5 +1,6 @@
 # Rust Core
 
+- [วันที่ Clippy เริ่มรีวิว PR ไม่ทัน](./clippy-review-queue.md) — 2026-07-08
 - [เมื่อ Trait ไม่ใช่แค่เงื่อนไข แต่คือพารามิเตอร์ลับที่ Compiler แอบส่งให้คุณ](./dictionary-passing-style.md) — 2026-03-23
 - [เมื่อสถาปัตยกรรมของภาษาไม่อาจลอกเลียนแบบได้ ทำไม Error Handling ของ Rust ถึงเป็น Masterpiece](./error-handling-masterpiece.md) — 2026-03-11
 - [ทำความรู้จัก Smart Pointer](./smart-pointers-guide.md) — 2026-03-05
