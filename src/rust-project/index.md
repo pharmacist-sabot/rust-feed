@@ -1,5 +1,6 @@
 # Rust Project
 
+- [calamine ที่ไม่ใช่ยาแก้แพ้แก้คัน 😅](./calamine-excel-reader.md) — 2026-05-27
 - [รู้จัก nostr-vpn กันหรือยัง?](./nostr-vpn.md) — 2026-05-22
 - [แผนที่โลกกับ Shared Memory มาทำความรู้จัก GeoRust กัน](./georust-shared-memory.md) — 2026-05-13
 - [ถ้า cargo test มันช้า มาลอง cargo-nextest ไหมล่ะ](./cargo-nextest.md) — 2026-04-28
