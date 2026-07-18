@@ -84,6 +84,7 @@
 # Rust Project
 
 - [Rust Project](./rust-project/index.md)
+  - [MenSung สร้างแอปที่พร้อมไปทุกที่ด้วย Rust](./rust-project/mensung-offline-drug-interaction.md)
   - [calamine ที่ไม่ใช่ยาแก้แพ้แก้คัน 😅](./rust-project/calamine-excel-reader.md)
   - [รู้จัก nostr-vpn กันหรือยัง?](./rust-project/nostr-vpn.md)
   - [แผนที่โลกกับ Shared Memory มาทำความรู้จัก GeoRust กัน](./rust-project/georust-shared-memory.md)
