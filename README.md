@@ -1,99 +1,138 @@
 # Rust Feed
 
-[![Lint](https://github.com/rust-feed/rust-feed.github.io/actions/workflows/lint.yml/badge.svg)](https://github.com/rust-feed/rust-feed.github.io/actions/workflows/lint.yml)
-
-**Rust Feed** is an open-source collection of Rust articles and tutorials originally posted in the Facebook Rust Dev Community. This repository serves as a centralized, well-organized knowledge base built with [mdBook](https://rust-lang.github.io/mdBook/).
-
-## Access the Book
-
-You can read the compiled book online here:
-**[Rust Feed Documentation](https://rust-feed.github.io/)**
-
----
-
-## Prerequisites
-
-To run this project locally and build the documentation, you will need:
-
-- **Rust and Cargo**: Install via [rustup](https://rustup.rs/) (`curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`)
-- **mdBook**: Install via cargo:
-
-  ```sh
-  cargo install mdbook
-  ```
-
----
-
-## How to Contribute / Add New Articles
-
-We have fully automated the indexing process native to the Rust ecosystem. To add a new article to the book:
-
-1. **Create your Markdown file**: Write your article and save it as a `.md` file. Ensure it has a `# Heading 1` at the top as the title.
-2. **Place it in the correct category**: Move your `.md` file into the corresponding category folder inside `src/`. For example:
-
-   ```text
-   src/case-study/my-new-article.md
-   ```
-
-3. **Run the Update Script**: From the root of the project, run the update script. This script will automatically update the category index and regenerate the `SUMMARY.md` file using our custom Rust auto-indexer.
-
-   ```sh
-   ./update.sh
-   ```
-
-4. **Preview locally** (Optional):
-
-   ```sh
-   mdbook serve --open
-   ```
-
----
-
-## Project Structure
-
-```text
-rust-feed/
-├── book/                  # Compiled HTML output (gitignored)
-├── scripts/
-│   └── auto_index/        # Custom Rust CLI to auto-generate indices and SUMMARY.md
-├── src/                   # Markdown source files for the book
-│   ├── case-study/        # Category folders containing articles
-│   ├── deep-dive/
-│   ├── ...
-│   ├── README.md          # Introduction page for mdBook
-│   └── SUMMARY.md         # Auto-generated book sidebar structure
-├── book.toml              # mdBook configuration
-├── update.sh              # Wrapper script to run auto_index and mdbook build
-└── README.md              # This file
+```
+██████╗ ██╗   ██╗ ██████╗████████╗███████╗███████╗███████╗██████╗
+██╔══██╗██║   ██║██╔════╝╚══██╔══╝██╔════╝██╔════╝██╔════╝██╔══██╗
+██████╔╝██║   ██║███████╗   ██║   █████╗  █████╗  █████╗  ██║  ██║
+██╔══██╗██║   ██║╚════██║   ██║   ██╔══╝  ██╔══╝  ██╔══╝  ██║  ██║
+██║  ██║╚██████╔╝██████╔╝   ██║   ██║     ███████╗███████╗██████╔╝
+╚═╝  ╚═╝ ╚═════╝ ╚═════╝   ╚═╝╚═╝╚══════╝╚══════╝╚═════╝
 ```
 
 ---
 
-## License
+## ◆ PULSE
 
-This project is licensed under the [MIT License](LICENSE).
+The Rust community writes in a hundred places; the Facebook Rust Dev
+Community writes in one that vanishes with every scroll. Rust Feed is
+the rescue: a centralized, open-source collection of those articles
+and tutorials - case studies, deep dives, tool reviews, release
+notes, crate guides - organized into a knowledge base built with
+mdBook, served at [rust-feed.github.io](https://rust-feed.github.io).
+What the community shared is no longer lost in the feed; it is a
+book.
+
+| Curated ▸ sealed | Indexed ▸ sealed | mdBook ▸ sealed | Open ▸ sealed |
+|---|---|---|---|
+
+*The feed-to-book pipeline - collect, categorize, index - is sealed.*
+
+> Built with mdBook and a custom Rust auto-indexer - the community's
+> writing, organized by machines so it reads like a book.
+>
+> **suradet-ps**, artifact keeper
 
 ---
 
-## Linting
+## ◆ IGNITION
 
-We use `markdownlint-cli2` in CI to lint Markdown files under `src/`.
+One install, one script.
 
-Run the linter locally (uses `npx` so you don't need a global install):
-
-```bash
-npx markdownlint-cli2 "src/**/*.md" --config .markdownlint.yml --fix
+```
+⟫ cargo install mdbook
+⟫ git clone https://github.com/rust-feed/rust-feed.github.io.git
+⟫ cd rust-feed.github.io
+⟫ ./update.sh
 ```
 
-If you'd like to also run the link checker used in CI, install `lychee` and run:
+The book is served at [rust-feed.github.io](https://rust-feed.github.io);
+locally, `⟫ mdbook serve --open` previews it on your machine.
 
-```bash
-cargo install lychee
-lychee check --exclude-loopback --exclude "facebook.com" "src/**/*.md"
+<details>
+<summary>Prerequisites</summary>
+
+- [Rust and Cargo](https://rustup.rs/) - to install mdBook and run
+  the auto-indexer
+- [mdBook](https://rust-lang.github.io/mdBook/) - installed above
+
+</details>
+
+---
+
+## ◆ ANATOMY
+
+One script, one indexer, a book that files itself.
+
+- **Collects** - articles live as markdown under `src/` in category
+  folders - `case-study/`, `deep-dive/`, `rust-tools/`,
+  `rust-update/`, `rust-crates/`, `rust-project/` - each file with
+  its `# Heading 1` as the title.
+- **Indexes** - the custom Rust CLI in `scripts/auto_index/` scans
+  the folders, regenerates each category index, and rewrites
+  `SUMMARY.md` - the book's structure maintains itself, no manual
+  sidebar surgery.
+- **Builds** - `update.sh` runs the indexer then the mdBook build;
+  the compiled HTML lands in `book/` (gitignored), and CI ships it
+  to GitHub Pages.
+- **Lints** - `markdownlint-cli2` enforces the markdown contract in
+  CI, and `lychee` checks every link - a broken link or a malformed
+  heading fails the build before the reader meets it.
+- **Tests** - the auto-indexer carries its own test suite under
+  `scripts/auto_index/` - the same suite CI runs.
+
+---
+
+## ◆ RITUALS
+
+**The core ceremony** - adding an article:
+
+1. Write the article as markdown with a `# Heading 1` title.
+2. Place it in the category it belongs to:
+   `src/case-study/my-new-article.md`.
+3. Run `./update.sh` - the indexer files it, updates the category
+   index, and regenerates `SUMMARY.md`.
+4. Preview with `mdbook serve --open`, then push - CI lints, checks
+   links, runs the indexer tests, and ships the book.
+
+**The ceremony of the auto-index** - no one edits `SUMMARY.md` by
+hand: the indexer reads the folders and writes the structure. The
+book stays consistent because the machine files the additions, and
+the tests stay green because the machine verifies itself.
+
+**The ceremony of the shared community** - every article carries the
+credit of its original post; the collection exists to give the
+community's writing a permanent shelf. What was ephemeral in the
+feed becomes reference material.
+
+---
+
+## ◆ ECHOES
+
+**Where this artifact is heading**
+
+```
+collect ▸ category-organized article folders ───────────────────────── ▸ sealed
+index   ▸ Rust auto-indexer regenerates SUMMARY.md ─────────────────── ▸ sealed
+build   ▸ mdBook + update.sh pipeline ──────────────────────────────── ▸ sealed
+guard   ▸ markdownlint + lychee + indexer tests in CI ──────────────── ▸ sealed
 ```
 
-Run the auto-index tests (same as CI):
+**Raising the artifact** - the contribution rules live in
+`CONTRIBUTING.md`; the security posture in `SECURITY.md`; the spelling
+allow-list in `.cspell.json`. The auto-indexer tests run with
+`cargo test --manifest-path scripts/auto_index/Cargo.toml`. Open an
+issue first to discuss a change.
 
-```bash
-cargo test --manifest-path scripts/auto_index/Cargo.toml
+**Status** - CI lints, link-checks, tests, and deploys every push.
+[Watch the gates](.github/workflows).
+
+---
+
 ```
+  ─────────────────────────────────────────
+   A community's feed scrolls away.
+   A community's book stays.
+  ─────────────────────────────────────────
+```
+
+Licensed under the [MIT License](LICENSE).
