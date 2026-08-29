@@ -23,8 +23,8 @@
 **Credit & Reference:**
 
 1. [I Put ML-KEM-768 Post-Quantum Crypto in a Mesh Network — Here's What Broke](https://dev.to/phantomojo/i-put-ml-kem-768-post-quantum-crypto-in-a-mesh-network-heres-what-broke-1495)
-2. [GitHub: GhostWire-secure-mesh-communication](https://github.com/Phantomojo/GhostWire-secure-mesh-communication)
-3. [GHOSTWIRE](https://phantomojo.github.io/GhostWire-secure-mesh-communication/)
+2. GitHub: GhostWire-secure-mesh-communication (ไม่สามารถเข้าถึงได้แล้ว - ลิงก์ต้นทางถูกลบ)
+3. GHOSTWIRE (ไม่สามารถเข้าถึงได้แล้ว - ลิงก์ต้นทางถูกลบ)
 
 <!-- NAVIGATION:START -->
 <!-- markdownlint-disable MD033 -->
